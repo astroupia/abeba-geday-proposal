@@ -1,17 +1,32 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Check, Info } from "lucide-react"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
-import SectionHeading from "@/components/section-heading"
-import AnimatedBackground from "@/components/animated-background"
+import { useState } from "react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Check, Info } from "lucide-react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import SectionHeading from "@/components/section-heading";
+import AnimatedBackground from "@/components/animated-background";
 
 export default function BudgetPage() {
-  const [selectedOption, setSelectedOption] = useState<"shopify" | "custom">("custom")
+  const [selectedOption, setSelectedOption] = useState<"shopify" | "custom">(
+    "custom"
+  );
 
   return (
     <>
@@ -25,7 +40,8 @@ export default function BudgetPage() {
                 Budget <span className="gradient-text">Proposal</span>
               </h1>
               <p className="text-xl text-muted-foreground">
-                A transparent breakdown of costs for your digital transformation project.
+                A transparent breakdown of costs for your digital transformation
+                project.
               </p>
             </div>
           </div>
@@ -51,37 +67,62 @@ export default function BudgetPage() {
               <TabsContent value="detailed" className="space-y-8">
                 <div className="bg-card rounded-lg shadow-sm overflow-hidden">
                   <Table>
-                    <TableCaption>All prices are in ETB and exclusive of VAT.</TableCaption>
+                    <TableCaption>
+                      All prices are in ETB and exclusive of VAT.
+                    </TableCaption>
                     <TableHeader>
                       <TableRow>
-                        <TableHead className="w-[300px]">Service Component</TableHead>
+                        <TableHead className="w-[300px]">
+                          Service Component
+                        </TableHead>
                         <TableHead>Description</TableHead>
                         <TableHead className="text-right">Cost (ETB)</TableHead>
                       </TableRow>
                     </TableHeader>
                     <TableBody>
                       <TableRow>
-                        <TableCell className="font-medium">Discovery & Planning</TableCell>
-                        <TableCell>Initial consultations, requirement gathering, architecture design</TableCell>
+                        <TableCell className="font-medium">
+                          Discovery & Planning
+                        </TableCell>
+                        <TableCell>
+                          Initial consultations, requirement gathering,
+                          architecture design
+                        </TableCell>
                         <TableCell className="text-right">50,000</TableCell>
                       </TableRow>
                       <TableRow>
-                        <TableCell className="font-medium">Branding & Identity Design</TableCell>
-                        <TableCell>Logo, brand guide, digital templates, visual identity (4 entities)</TableCell>
+                        <TableCell className="font-medium">
+                          Branding & Identity Design
+                        </TableCell>
+                        <TableCell>
+                          Logo, brand guide, digital templates, visual identity
+                          (4 entities)
+                        </TableCell>
                         <TableCell className="text-right">220,000</TableCell>
                       </TableRow>
                       <TableRow>
-                        <TableCell className="font-medium">Website Design (UI/UX)</TableCell>
-                        <TableCell>Mobile-first responsive design, prototyping, user journey optimization</TableCell>
+                        <TableCell className="font-medium">
+                          Website Design (UI/UX)
+                        </TableCell>
+                        <TableCell>
+                          Mobile-first responsive design, prototyping, user
+                          journey optimization
+                        </TableCell>
                         <TableCell className="text-right">120,000</TableCell>
                       </TableRow>
                       <TableRow>
-                        <TableCell className="font-medium">Website App Development</TableCell>
-                        <TableCell>Frontend, backend, CMS (custom or HubSpot), SEO setup</TableCell>
+                        <TableCell className="font-medium">
+                          Website App Development
+                        </TableCell>
+                        <TableCell>
+                          Frontend, backend, CMS (custom or HubSpot), SEO setup
+                        </TableCell>
                         <TableCell className="text-right">350,000</TableCell>
                       </TableRow>
                       <TableRow>
-                        <TableCell className="font-medium">E-Commerce Integration</TableCell>
+                        <TableCell className="font-medium">
+                          E-Commerce Integration
+                        </TableCell>
                         <TableCell className="flex items-center">
                           <div className="flex flex-col space-y-2">
                             <div className="flex items-center">
@@ -104,7 +145,9 @@ export default function BudgetPage() {
                                 onChange={() => setSelectedOption("custom")}
                                 className="mr-2"
                               />
-                              <label htmlFor="custom">Custom Microservices</label>
+                              <label htmlFor="custom">
+                                Custom Microservices
+                              </label>
                             </div>
                           </div>
                         </TableCell>
@@ -113,35 +156,61 @@ export default function BudgetPage() {
                         </TableCell>
                       </TableRow>
                       <TableRow>
-                        <TableCell className="font-medium">Social Media Setup & Strategy</TableCell>
-                        <TableCell>Platform setup, branding, strategy & growth tool integration</TableCell>
+                        <TableCell className="font-medium">
+                          Social Media Setup & Strategy
+                        </TableCell>
+                        <TableCell>
+                          Platform setup, branding, strategy & growth tool
+                          integration
+                        </TableCell>
                         <TableCell className="text-right">150,000</TableCell>
                       </TableRow>
                       <TableRow>
-                        <TableCell className="font-medium">Content Calendar & Post Design (3 Months)</TableCell>
-                        <TableCell>Content planning, design, and scheduling</TableCell>
+                        <TableCell className="font-medium">
+                          Content Calendar & Post Design (3 Months)
+                        </TableCell>
+                        <TableCell>
+                          Content planning, design, and scheduling
+                        </TableCell>
                         <TableCell className="text-right">55,000</TableCell>
                       </TableRow>
                       <TableRow>
-                        <TableCell className="font-medium">Social Feed Integration</TableCell>
-                        <TableCell>Integration of Instagram/Facebook/Twitter feeds</TableCell>
+                        <TableCell className="font-medium">
+                          Social Feed Integration
+                        </TableCell>
+                        <TableCell>
+                          Integration of Instagram/Facebook/Twitter feeds
+                        </TableCell>
                         <TableCell className="text-right">20,000</TableCell>
                       </TableRow>
                       <TableRow>
-                        <TableCell className="font-medium">Training & Knowledge Transfer</TableCell>
-                        <TableCell>Hands-on training (ILT, simulation, role-play, video manuals)</TableCell>
+                        <TableCell className="font-medium">
+                          Training & Knowledge Transfer
+                        </TableCell>
+                        <TableCell>
+                          Hands-on training (ILT, simulation, role-play, video
+                          manuals)
+                        </TableCell>
                         <TableCell className="text-right">150,000</TableCell>
                       </TableRow>
                       <TableRow>
-                        <TableCell className="font-medium">Post-Launch Technical Support (30 Days)</TableCell>
-                        <TableCell>Bug fixes, minor changes, performance monitoring</TableCell>
-                        <TableCell className="text-right font-medium text-primary">FREE</TableCell>
+                        <TableCell className="font-medium">
+                          Post-Launch Technical Support (30 Days)
+                        </TableCell>
+                        <TableCell>
+                          Bug fixes, minor changes, performance monitoring
+                        </TableCell>
+                        <TableCell className="text-right font-medium text-primary">
+                          FREE
+                        </TableCell>
                       </TableRow>
                       <TableRow className="bg-primary/5 font-bold">
                         <TableCell>TOTAL (Before VAT)</TableCell>
                         <TableCell></TableCell>
                         <TableCell className="text-right">
-                          {selectedOption === "shopify" ? "1,520,000" : "1,670,000"}
+                          {selectedOption === "shopify"
+                            ? "1,520,000"
+                            : "1,670,000"}
                         </TableCell>
                       </TableRow>
                     </TableBody>
@@ -152,12 +221,18 @@ export default function BudgetPage() {
               <TabsContent value="summary">
                 <div className="grid md:grid-cols-2 gap-8">
                   <div className="bg-card rounded-lg shadow-sm p-8 border border-border">
-                    <h3 className="text-2xl font-bold mb-2">Shopify Integration</h3>
+                    <h3 className="text-2xl font-bold mb-2">
+                      Shopify Integration
+                    </h3>
                     <p className="text-muted-foreground mb-6">
-                      Perfect for businesses looking for a quick e-commerce setup with minimal maintenance.
+                      Perfect for businesses looking for a quick e-commerce
+                      setup with minimal maintenance.
                     </p>
                     <div className="text-4xl font-bold mb-6">
-                      1,520,000 <span className="text-lg font-normal text-muted-foreground">ETB</span>
+                      1,520,000{" "}
+                      <span className="text-lg font-normal text-muted-foreground">
+                        ETB
+                      </span>
                     </div>
                     <ul className="space-y-3 mb-8">
                       {[
@@ -174,7 +249,12 @@ export default function BudgetPage() {
                         </li>
                       ))}
                     </ul>
-                    <Button className="w-full" size="lg" variant="outline" asChild>
+                    <Button
+                      className="w-full"
+                      size="lg"
+                      variant="outline"
+                      asChild
+                    >
                       <Link href="/contact">Get Started</Link>
                     </Button>
                   </div>
@@ -183,12 +263,18 @@ export default function BudgetPage() {
                     <div className="absolute top-0 right-0 bg-primary text-primary-foreground py-1 px-4 text-sm font-medium">
                       Popular
                     </div>
-                    <h3 className="text-2xl font-bold mb-2">Custom Microservices</h3>
+                    <h3 className="text-2xl font-bold mb-2">
+                      Custom Microservices
+                    </h3>
                     <p className="text-muted-foreground mb-6">
-                      Ideal for businesses requiring complete control and advanced customization.
+                      Ideal for businesses requiring complete control and
+                      advanced customization.
                     </p>
                     <div className="text-4xl font-bold mb-6">
-                      1,670,000 <span className="text-lg font-normal text-muted-foreground">ETB</span>
+                      1,670,000{" "}
+                      <span className="text-lg font-normal text-muted-foreground">
+                        ETB
+                      </span>
                     </div>
                     <ul className="space-y-3 mb-8">
                       {[
@@ -237,19 +323,27 @@ export default function BudgetPage() {
                 </TableHeader>
                 <TableBody>
                   <TableRow>
-                    <TableCell className="font-medium">Upon contract signing</TableCell>
+                    <TableCell className="font-medium">
+                      Upon contract signing
+                    </TableCell>
                     <TableCell className="text-right">20%</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell className="font-medium">After website development completion</TableCell>
+                    <TableCell className="font-medium">
+                      After website development completion
+                    </TableCell>
                     <TableCell className="text-right">35%</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell className="font-medium">After integration of AI, GPS, and e-commerce</TableCell>
+                    <TableCell className="font-medium">
+                      After integration of AI, GPS, and e-commerce
+                    </TableCell>
                     <TableCell className="text-right">20%</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell className="font-medium">After training, handover, and project delivery</TableCell>
+                    <TableCell className="font-medium">
+                      After training, handover, and project delivery
+                    </TableCell>
                     <TableCell className="text-right">25%</TableCell>
                   </TableRow>
                   <TableRow className="bg-primary/5 font-bold">
@@ -262,8 +356,14 @@ export default function BudgetPage() {
 
             <div className="mt-6 space-y-2 text-sm text-muted-foreground">
               <p>• VAT will be applied as per applicable tax laws.</p>
-              <p>• Payment Due: Within 2 business days of invoice issuance at each milestone.</p>
-              <p>• Mode of Payment: Bank transfer or cheque, details to be provided upon agreement.</p>
+              <p>
+                • Payment Due: Within 2 business days of invoice issuance at
+                each milestone.
+              </p>
+              <p>
+                • Mode of Payment: Bank transfer or cheque, details to be
+                provided upon agreement.
+              </p>
             </div>
           </div>
         </div>
@@ -280,37 +380,46 @@ export default function BudgetPage() {
 
           <div className="mt-12 max-w-4xl mx-auto">
             <div className="bg-card rounded-lg shadow-sm p-8">
-              <h3 className="text-2xl font-bold mb-6">Paid Standard Monthly Maintenance Package</h3>
+              <h3 className="text-2xl font-bold mb-6">
+                Paid Standard Monthly Maintenance Package
+              </h3>
 
               <div className="grid md:grid-cols-2 gap-6">
                 {[
                   {
                     service: "Performance Monitoring",
-                    details: "Real-time uptime tracking, load balancing audits, and speed optimizations.",
+                    details:
+                      "Real-time uptime tracking, load balancing audits, and speed optimizations.",
                   },
                   {
                     service: "Security Updates",
-                    details: "CMS patching, SSL renewals, dependency upgrades, and vulnerability scans.",
+                    details:
+                      "CMS patching, SSL renewals, dependency upgrades, and vulnerability scans.",
                   },
                   {
                     service: "Content Update Assistance",
-                    details: "Minor updates to text/images, job listings, and blog posts.",
+                    details:
+                      "Minor updates to text/images, job listings, and blog posts.",
                   },
                   {
                     service: "Bug Fixes & Minor Enhancements",
-                    details: "Up to 10 hours/month of support for small changes and fixes.",
+                    details:
+                      "Up to 10 hours/month of support for small changes and fixes.",
                   },
                   {
                     service: "System Backup & Recovery",
-                    details: "Daily server backups, monthly restore point validation.",
+                    details:
+                      "Daily server backups, monthly restore point validation.",
                   },
                   {
                     service: "Third-Party Integration Maintenance",
-                    details: "Ensuring continued functionality of GPS, chatbot, e-commerce, etc.",
+                    details:
+                      "Ensuring continued functionality of GPS, chatbot, e-commerce, etc.",
                   },
                   {
                     service: "Monthly Report",
-                    details: "Summary of tasks completed, performance metrics, and recommendations.",
+                    details:
+                      "Summary of tasks completed, performance metrics, and recommendations.",
                   },
                 ].map((item, index) => (
                   <div key={index} className="flex">
@@ -319,7 +428,9 @@ export default function BudgetPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold">{item.service}</h4>
-                      <p className="text-muted-foreground text-sm">{item.details}</p>
+                      <p className="text-muted-foreground text-sm">
+                        {item.details}
+                      </p>
                     </div>
                   </div>
                 ))}
@@ -327,8 +438,9 @@ export default function BudgetPage() {
 
               <div className="mt-8 p-4 bg-primary/10 rounded-lg text-sm">
                 <p>
-                  Additional development or major feature changes beyond the scope of the retainer will be billed
-                  separately with client approval.
+                  Additional development or major feature changes beyond the
+                  scope of the retainer will be billed separately with client
+                  approval.
                 </p>
               </div>
 
@@ -342,7 +454,10 @@ export default function BudgetPage() {
                       </Button>
                     </TooltipTrigger>
                     <TooltipContent>
-                      <p>Maintenance packages are customized based on your specific needs.</p>
+                      <p>
+                        Maintenance packages are customized based on your
+                        specific needs.
+                      </p>
                     </TooltipContent>
                   </Tooltip>
                 </TooltipProvider>
@@ -356,10 +471,12 @@ export default function BudgetPage() {
       <section className="py-20 bg-secondary text-secondary-foreground">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold">Ready to Invest in Your Digital Future?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold">
+              Ready to Invest in Your Digital Future?
+            </h2>
             <p className="text-secondary-foreground/80 text-lg">
-              Let's work together to create a comprehensive digital ecosystem that elevates your brand and supports your
-              business objectives.
+              Let's work together to create a comprehensive digital ecosystem
+              that elevates your brand and supports your business objectives.
             </p>
             <div className="flex flex-wrap justify-center gap-4 pt-4">
               <Button size="lg" variant="default" asChild>
@@ -367,7 +484,7 @@ export default function BudgetPage() {
                   View Our Portfolio <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" asChild>
+              <Button size="lg" variant="outlineInverse" asChild>
                 <Link href="/contact">Contact Us</Link>
               </Button>
             </div>
@@ -375,5 +492,5 @@ export default function BudgetPage() {
         </div>
       </section>
     </>
-  )
+  );
 }

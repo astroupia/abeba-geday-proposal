@@ -1,11 +1,18 @@
-import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { ArrowRight, CheckCircle, Users, Code, Lightbulb, Award } from "lucide-react"
-import AnimatedBackground from "@/components/animated-background"
-import AnimatedText from "@/components/animated-text"
-import SectionHeading from "@/components/section-heading"
-import InteractiveCard from "@/components/interactive-card"
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import {
+  ArrowRight,
+  CheckCircle,
+  Users,
+  Code,
+  Lightbulb,
+  Award,
+} from "lucide-react";
+import AnimatedBackground from "@/components/animated-background";
+import AnimatedText from "@/components/animated-text";
+import SectionHeading from "@/components/section-heading";
+import InteractiveCard from "@/components/interactive-card";
 
 export default function Home() {
   return (
@@ -19,22 +26,35 @@ export default function Home() {
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
                 <div className="mb-4">
                   {/* Render each word separately with a space */}
-                  {"Digital Transformation Proposal for".split(" ").map((word, index) => (
-                    <AnimatedText key={index} text={word} className="inline-block mr-2" once />
-                  ))}
+                  {"Digital Transformation Proposal for"
+                    .split(" ")
+                    .map((word, index) => (
+                      <AnimatedText
+                        key={index}
+                        text={word}
+                        className="inline-block mr-2"
+                        once
+                      />
+                    ))}
                 </div>
                 <div>
                   {/* Render each word separately with a space */}
-                  {"Abeba Geday Business Group".split(" ").map((word, index) => (
-                    <span key={index} className="gradient-text inline-block mr-2">
-                      {word}
-                    </span>
-                  ))}
+                  {"Abeba Geday Business Group"
+                    .split(" ")
+                    .map((word, index) => (
+                      <span
+                        key={index}
+                        className="gradient-text inline-block mr-2"
+                      >
+                        {word}
+                      </span>
+                    ))}
                 </div>
               </h1>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                A comprehensive digital ecosystem that seamlessly integrates branding, web development, social media
-                management, and hands-on training.
+                A comprehensive digital ecosystem that seamlessly integrates
+                branding, web development, social media management, and hands-on
+                training.
               </p>
               <div className="flex flex-wrap justify-center gap-4 pt-6">
                 <Button size="lg" asChild>
@@ -63,14 +83,16 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <div className="space-y-6">
               <p className="text-lg">
-                Sydek is a full-service digital agency with a team of top-tier developers—some with backgrounds at
-                global technology firms like Google and Bloomberg, who bring world-class engineering discipline and
-                creativity to every project we undertake.
+                Sydek is a full-service digital agency with a team of top-tier
+                developers—some with backgrounds at global technology firms like
+                Google and Bloomberg, who bring world-class engineering
+                discipline and creativity to every project we undertake.
               </p>
               <p>
-                We specialize in full-cycle digital services, including brand identity design, enterprise software
-                development, mobile apps, and scalable cloud solutions. Our work is driven by precision, innovation, and
-                a deep commitment to our clients' success.
+                We specialize in full-cycle digital services, including brand
+                identity design, enterprise software development, mobile apps,
+                and scalable cloud solutions. Our work is driven by precision,
+                innovation, and a deep commitment to our clients' success.
               </p>
               <ul className="space-y-2">
                 {[
@@ -126,17 +148,20 @@ export default function Home() {
               {
                 icon: <Award className="h-10 w-10" />,
                 title: "Excellence",
-                description: "We are committed to delivering the highest quality in everything we do.",
+                description:
+                  "We are committed to delivering the highest quality in everything we do.",
               },
               {
                 icon: <Users className="h-10 w-10" />,
                 title: "Collaboration",
-                description: "We believe in the power of teamwork and partnership with our clients.",
+                description:
+                  "We believe in the power of teamwork and partnership with our clients.",
               },
               {
                 icon: <CheckCircle className="h-10 w-10" />,
                 title: "Integrity",
-                description: "We operate with honesty, transparency, and ethical standards in all our dealings.",
+                description:
+                  "We operate with honesty, transparency, and ethical standards in all our dealings.",
               },
               {
                 icon: <Code className="h-10 w-10" />,
@@ -147,7 +172,8 @@ export default function Home() {
               {
                 icon: <ArrowRight className="h-10 w-10" />,
                 title: "Client-First",
-                description: "We act as your digital partner—equipping your team with the right tools and support.",
+                description:
+                  "We act as your digital partner—equipping your team with the right tools and support.",
               },
             ].map((value, index) => (
               <InteractiveCard key={index} className="bg-card p-6">
@@ -168,10 +194,12 @@ export default function Home() {
       <section className="py-20 bg-secondary text-secondary-foreground">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold">Ready to Transform Your Digital Presence?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold">
+              Ready to Transform Your Digital Presence?
+            </h2>
             <p className="text-secondary-foreground/80 text-lg">
-              Let's work together to create a comprehensive digital ecosystem that elevates your brand and supports your
-              business objectives.
+              Let's work together to create a comprehensive digital ecosystem
+              that elevates your brand and supports your business objectives.
             </p>
             <div className="flex flex-wrap justify-center gap-4 pt-4">
               <Button size="lg" variant="default" asChild>
@@ -179,7 +207,7 @@ export default function Home() {
                   Explore Our Solution <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" asChild>
+              <Button size="lg" variant="outlineInverse" asChild>
                 <Link href="/contact">Contact Us</Link>
               </Button>
             </div>
@@ -187,5 +215,5 @@ export default function Home() {
         </div>
       </section>
     </>
-  )
+  );
 }

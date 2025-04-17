@@ -1,10 +1,17 @@
-import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { ArrowRight, CheckCircle, Palette, Globe, Share2, BookOpen } from "lucide-react"
-import SectionHeading from "@/components/section-heading"
-import InteractiveCard from "@/components/interactive-card"
-import AnimatedBackground from "@/components/animated-background"
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import {
+  ArrowRight,
+  CheckCircle,
+  Palette,
+  Globe,
+  Share2,
+  BookOpen,
+} from "lucide-react";
+import SectionHeading from "@/components/section-heading";
+import InteractiveCard from "@/components/interactive-card";
+import AnimatedBackground from "@/components/animated-background";
 
 export default function SolutionPage() {
   return (
@@ -19,7 +26,8 @@ export default function SolutionPage() {
                 Our <span className="gradient-text">Proposed Solution</span>
               </h1>
               <p className="text-xl text-muted-foreground">
-                A comprehensive digital transformation package designed specifically for Abeba Geday Business Group.
+                A comprehensive digital transformation package designed
+                specifically for Abeba Geday Business Group.
               </p>
             </div>
           </div>
@@ -53,7 +61,8 @@ export default function SolutionPage() {
                   {
                     icon: <Share2 className="h-6 w-6" />,
                     title: "Social Media Integration & Management",
-                    description: "Strategy-first approach using proprietary tools to track performance and engagement.",
+                    description:
+                      "Strategy-first approach using proprietary tools to track performance and engagement.",
                   },
                   {
                     icon: <BookOpen className="h-6 w-6" />,
@@ -68,7 +77,9 @@ export default function SolutionPage() {
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold">{pillar.title}</h3>
-                      <p className="text-muted-foreground">{pillar.description}</p>
+                      <p className="text-muted-foreground">
+                        {pillar.description}
+                      </p>
                     </div>
                   </div>
                 ))}
@@ -144,7 +155,9 @@ export default function SolutionPage() {
             ].map((step, index) => (
               <InteractiveCard key={index} className="bg-card p-6 h-full">
                 <div className="space-y-4">
-                  <div className="text-4xl font-bold text-primary/30">{step.step}</div>
+                  <div className="text-4xl font-bold text-primary/30">
+                    {step.step}
+                  </div>
                   <h3 className="text-xl font-semibold">{step.title}</h3>
                   <p className="text-muted-foreground">{step.description}</p>
                 </div>
@@ -183,7 +196,9 @@ export default function SolutionPage() {
               />
             </div>
             <div className="space-y-6 order-1 md:order-2">
-              <h3 className="text-2xl font-bold">Key Features & Implementation</h3>
+              <h3 className="text-2xl font-bold">
+                Key Features & Implementation
+              </h3>
 
               <div className="space-y-4">
                 {[
@@ -204,7 +219,8 @@ export default function SolutionPage() {
                   },
                   {
                     title: "Real-Time GPS Tracking",
-                    description: "Integration of real-time GPS tracking to support logistics and vehicle monitoring.",
+                    description:
+                      "Integration of real-time GPS tracking to support logistics and vehicle monitoring.",
                   },
                   {
                     title: "Modern UI/UX Design",
@@ -216,7 +232,9 @@ export default function SolutionPage() {
                     <CheckCircle className="h-5 w-5 text-primary shrink-0 mt-1" />
                     <div>
                       <h4 className="font-semibold">{feature.title}</h4>
-                      <p className="text-muted-foreground">{feature.description}</p>
+                      <p className="text-muted-foreground">
+                        {feature.description}
+                      </p>
                     </div>
                   </div>
                 ))}
@@ -225,13 +243,22 @@ export default function SolutionPage() {
               <div className="pt-4">
                 <h4 className="font-semibold mb-2">Technical Stack:</h4>
                 <div className="flex flex-wrap gap-2">
-                  {["Next.js", "TailwindCSS", "React", "Go", "PostgreSQL", "Docker", "Kubernetes"].map(
-                    (tech, index) => (
-                      <span key={index} className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">
-                        {tech}
-                      </span>
-                    ),
-                  )}
+                  {[
+                    "Next.js",
+                    "TailwindCSS",
+                    "React",
+                    "Go",
+                    "PostgreSQL",
+                    "Docker",
+                    "Kubernetes",
+                  ].map((tech, index) => (
+                    <span
+                      key={index}
+                      className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
+                    >
+                      {tech}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
@@ -284,7 +311,9 @@ export default function SolutionPage() {
                     <CheckCircle className="h-5 w-5 text-primary shrink-0 mt-1" />
                     <div>
                       <h4 className="font-semibold">{approach.title}</h4>
-                      <p className="text-muted-foreground">{approach.description}</p>
+                      <p className="text-muted-foreground">
+                        {approach.description}
+                      </p>
                     </div>
                   </div>
                 ))}
@@ -322,29 +351,36 @@ export default function SolutionPage() {
               },
               {
                 title: "Digital Marketing & Social Media",
-                description: "Guidance on planning content, managing posts, and analyzing metrics across platforms.",
+                description:
+                  "Guidance on planning content, managing posts, and analyzing metrics across platforms.",
               },
               {
                 title: "SEO & Analytics",
-                description: "Practical training on SEO essentials and analytics tailored to internal business users.",
+                description:
+                  "Practical training on SEO essentials and analytics tailored to internal business users.",
               },
               {
                 title: "Design Handover",
-                description: "Complete package with editable files, exported assets, and documentation on asset usage.",
+                description:
+                  "Complete package with editable files, exported assets, and documentation on asset usage.",
               },
               {
                 title: "Multi-Modal Learning",
-                description: "A mix of instructor-led training, simulation, role-playing, and microlearning modules.",
+                description:
+                  "A mix of instructor-led training, simulation, role-playing, and microlearning modules.",
               },
               {
                 title: "Post-Launch Support",
-                description: "Technical support, comprehensive documentation, and optional monthly service retainer.",
+                description:
+                  "Technical support, comprehensive documentation, and optional monthly service retainer.",
               },
             ].map((training, index) => (
               <InteractiveCard key={index} className="bg-card p-6 h-full">
                 <div className="space-y-4">
                   <h3 className="text-xl font-semibold">{training.title}</h3>
-                  <p className="text-muted-foreground">{training.description}</p>
+                  <p className="text-muted-foreground">
+                    {training.description}
+                  </p>
                 </div>
               </InteractiveCard>
             ))}
@@ -364,10 +400,12 @@ export default function SolutionPage() {
       <section className="py-20 bg-secondary text-secondary-foreground">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold">Ready to Begin Your Digital Transformation?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold">
+              Ready to Begin Your Digital Transformation?
+            </h2>
             <p className="text-secondary-foreground/80 text-lg">
-              Let's work together to create a comprehensive digital ecosystem that elevates your brand and supports your
-              business objectives.
+              Let's work together to create a comprehensive digital ecosystem
+              that elevates your brand and supports your business objectives.
             </p>
             <div className="flex flex-wrap justify-center gap-4 pt-4">
               <Button size="lg" variant="default" asChild>
@@ -375,7 +413,7 @@ export default function SolutionPage() {
                   View Project Timeline <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" asChild>
+              <Button size="lg" variant="outlineInverse" asChild>
                 <Link href="/contact">Contact Us</Link>
               </Button>
             </div>
@@ -383,5 +421,5 @@ export default function SolutionPage() {
         </div>
       </section>
     </>
-  )
+  );
 }

@@ -1,8 +1,8 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Calendar, Clock, CheckCircle } from "lucide-react"
-import SectionHeading from "@/components/section-heading"
-import AnimatedBackground from "@/components/animated-background"
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Calendar, Clock, CheckCircle } from "lucide-react";
+import SectionHeading from "@/components/section-heading";
+import AnimatedBackground from "@/components/animated-background";
 
 export default function TimelinePage() {
   return (
@@ -17,7 +17,8 @@ export default function TimelinePage() {
                 Project <span className="gradient-text">Timeline</span>
               </h1>
               <p className="text-xl text-muted-foreground">
-                A detailed breakdown of our project phases and estimated duration.
+                A detailed breakdown of our project phases and estimated
+                duration.
               </p>
             </div>
           </div>
@@ -46,33 +47,39 @@ export default function TimelinePage() {
               {[
                 {
                   phase: "Discovery & Planning",
-                  activities: "Requirements gathering, brand alignment, tech stack finalization",
+                  activities:
+                    "Requirements gathering, brand alignment, tech stack finalization",
                   duration: "1st week",
                   isActive: true,
                 },
                 {
                   phase: "Branding & Identity Design",
-                  activities: "Logo, visual assets, brand guide, and marketing materials",
+                  activities:
+                    "Logo, visual assets, brand guide, and marketing materials",
                   duration: "2nd - 5th weeks",
                 },
                 {
                   phase: "Website Design (UI/UX)",
-                  activities: "Wireframing, prototyping, and mobile-first design implementation",
+                  activities:
+                    "Wireframing, prototyping, and mobile-first design implementation",
                   duration: "6th - 8th week",
                 },
                 {
                   phase: "Web Development",
-                  activities: "Frontend & backend development, CMS setup or custom build, feature integration",
+                  activities:
+                    "Frontend & backend development, CMS setup or custom build, feature integration",
                   duration: "6th – 16th weeks",
                 },
                 {
                   phase: "Social Media Setup & Strategy",
-                  activities: "Platform branding, content strategy, growth tools integration",
+                  activities:
+                    "Platform branding, content strategy, growth tools integration",
                   duration: "4th – 12th week",
                 },
                 {
                   phase: "E-Commerce Integration",
-                  activities: "Shopify integration or custom store and admin microservices",
+                  activities:
+                    "Shopify integration or custom store and admin microservices",
                   duration: "2nd – 16th week",
                 },
                 {
@@ -87,17 +94,26 @@ export default function TimelinePage() {
                 },
                 {
                   phase: "Post-Launch Support",
-                  activities: "Technical assistance, optional retainer services",
+                  activities:
+                    "Technical assistance, optional retainer services",
                   duration: "Ongoing",
                 },
               ].map((item, index) => (
                 <div key={index} className="timeline-item">
-                  <div className={`timeline-content ${index % 2 === 0 ? "ml-auto" : "mr-auto"} bg-card`}>
+                  <div
+                    className={`timeline-content ${
+                      index % 2 === 0 ? "ml-auto" : "mr-auto"
+                    } bg-card`}
+                  >
                     <h3 className="text-lg font-semibold">{item.phase}</h3>
-                    <p className="text-muted-foreground text-sm mt-1">{item.activities}</p>
+                    <p className="text-muted-foreground text-sm mt-1">
+                      {item.activities}
+                    </p>
                     <div className="flex items-center mt-3">
                       <Clock className="h-4 w-4 text-primary mr-2" />
-                      <span className="text-sm font-medium">{item.duration}</span>
+                      <span className="text-sm font-medium">
+                        {item.duration}
+                      </span>
                     </div>
                     {item.isActive && (
                       <div className="mt-3 flex items-center text-sm text-primary">
@@ -134,19 +150,23 @@ export default function TimelinePage() {
             {[
               {
                 role: "Project Manager",
-                responsibility: "Oversees progress, facilitates communication, ensures milestones are met",
+                responsibility:
+                  "Oversees progress, facilitates communication, ensures milestones are met",
               },
               {
                 role: "Lead UI/UX Designer",
-                responsibility: "Designs user flows, prototypes, and mobile-first responsive UI",
+                responsibility:
+                  "Designs user flows, prototypes, and mobile-first responsive UI",
               },
               {
                 role: "Frontend Developer(s)",
-                responsibility: "Implements interactive web interfaces using modern frameworks",
+                responsibility:
+                  "Implements interactive web interfaces using modern frameworks",
               },
               {
                 role: "Backend Developer(s)",
-                responsibility: "Builds server-side logic, APIs, and integrations (e.g., job system, e-commerce)",
+                responsibility:
+                  "Builds server-side logic, APIs, and integrations (e.g., job system, e-commerce)",
               },
               {
                 role: "Quality Assurance",
@@ -154,31 +174,40 @@ export default function TimelinePage() {
               },
               {
                 role: "AI/Chatbot Engineer",
-                responsibility: "Integrates and trains AI chatbot with relevant responses and workflows",
+                responsibility:
+                  "Integrates and trains AI chatbot with relevant responses and workflows",
               },
               {
                 role: "GPS Integration Expert",
-                responsibility: "Handles real-time tracking integration and geolocation services",
+                responsibility:
+                  "Handles real-time tracking integration and geolocation services",
               },
               {
                 role: "Content & Social Strategist",
-                responsibility: "Designs content calendar, brand tone, growth strategy",
+                responsibility:
+                  "Designs content calendar, brand tone, growth strategy",
               },
               {
                 role: "SEO & Analytics Specialist",
-                responsibility: "Sets up indexing, tracks performance, ensures visibility",
+                responsibility:
+                  "Sets up indexing, tracks performance, ensures visibility",
               },
             ].map((member, index) => (
               <div key={index} className="bg-card p-6 rounded-lg shadow-sm">
-                <h3 className="text-lg font-semibold text-primary">{member.role}</h3>
-                <p className="text-muted-foreground mt-2">{member.responsibility}</p>
+                <h3 className="text-lg font-semibold text-primary">
+                  {member.role}
+                </h3>
+                <p className="text-muted-foreground mt-2">
+                  {member.responsibility}
+                </p>
               </div>
             ))}
           </div>
 
           <div className="mt-8 p-6 bg-primary/10 rounded-lg">
             <p className="text-center">
-              We also maintain a standby DevOps and QA team for deployment, monitoring, and bug fixing.
+              We also maintain a standby DevOps and QA team for deployment,
+              monitoring, and bug fixing.
             </p>
           </div>
         </div>
@@ -196,7 +225,9 @@ export default function TimelinePage() {
           <div className="grid md:grid-cols-2 gap-10 mt-12">
             <div className="space-y-6">
               <div>
-                <h3 className="text-xl font-semibold mb-4">Branding & Identity</h3>
+                <h3 className="text-xl font-semibold mb-4">
+                  Branding & Identity
+                </h3>
                 <ul className="space-y-2">
                   {[
                     "Logo files (SVG, PNG, PDF)",
@@ -212,7 +243,9 @@ export default function TimelinePage() {
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold mb-4">Website & E-Commerce Platform</h3>
+                <h3 className="text-xl font-semibold mb-4">
+                  Website & E-Commerce Platform
+                </h3>
                 <ul className="space-y-2">
                   {[
                     "Fully functional corporate website",
@@ -233,7 +266,9 @@ export default function TimelinePage() {
 
             <div className="space-y-6">
               <div>
-                <h3 className="text-xl font-semibold mb-4">Social Media Package</h3>
+                <h3 className="text-xl font-semibold mb-4">
+                  Social Media Package
+                </h3>
                 <ul className="space-y-2">
                   {[
                     "Set up and branding of all key social media accounts",
@@ -250,7 +285,9 @@ export default function TimelinePage() {
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold mb-4">Training & Handover Materials</h3>
+                <h3 className="text-xl font-semibold mb-4">
+                  Training & Handover Materials
+                </h3>
                 <ul className="space-y-2">
                   {[
                     "Instructor-led training sessions (live and recorded)",
@@ -268,9 +305,14 @@ export default function TimelinePage() {
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold mb-4">Post-Launch Support</h3>
+                <h3 className="text-xl font-semibold mb-4">
+                  Post-Launch Support
+                </h3>
                 <ul className="space-y-2">
-                  {["30 days of free technical support", "Optional monthly support retainer"].map((item, index) => (
+                  {[
+                    "30 days of free technical support",
+                    "Optional monthly support retainer",
+                  ].map((item, index) => (
                     <li key={index} className="flex items-center">
                       <CheckCircle className="h-5 w-5 text-primary mr-2 shrink-0" />
                       <span>{item}</span>
@@ -295,10 +337,12 @@ export default function TimelinePage() {
       <section className="py-20 bg-secondary text-secondary-foreground">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold">Ready to Start Your Project?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold">
+              Ready to Start Your Project?
+            </h2>
             <p className="text-secondary-foreground/80 text-lg">
-              Let's work together to create a comprehensive digital ecosystem that elevates your brand and supports your
-              business objectives.
+              Let's work together to create a comprehensive digital ecosystem
+              that elevates your brand and supports your business objectives.
             </p>
             <div className="flex flex-wrap justify-center gap-4 pt-4">
               <Button size="lg" variant="default" asChild>
@@ -306,7 +350,7 @@ export default function TimelinePage() {
                   View Budget Proposal <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" asChild>
+              <Button size="lg" variant="outlineInverse" asChild>
                 <Link href="/contact">Contact Us</Link>
               </Button>
             </div>
@@ -314,5 +358,5 @@ export default function TimelinePage() {
         </div>
       </section>
     </>
-  )
+  );
 }

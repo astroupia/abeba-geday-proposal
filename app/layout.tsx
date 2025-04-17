@@ -12,6 +12,10 @@ export const metadata: Metadata = {
   title: "Sydek IT Solutions - Proposal for Abeba Geday Business Group",
   description: "A comprehensive digital transformation proposal",
   generator: "v0.dev",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
