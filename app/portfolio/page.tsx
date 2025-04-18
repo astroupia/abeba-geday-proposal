@@ -16,7 +16,7 @@ const portfolioItems = [
       "A sophisticated platform for diplomatic services and international relations.",
     image:
       "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2073&auto=format&fit=crop",
-    url: "https://diplomat-corner.vercel.app",
+    url: "https://diplomat-corner.vercel.app/",
   },
   {
     id: "fetan",
@@ -225,18 +225,30 @@ export default function PortfolioPage() {
 
           <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {portfolioItems.map((item) => (
-              <div key={item.id} className="portfolio-card group">
+              <div
+                key={item.id}
+                className="portfolio-card group bg-card hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors"
+              >
                 <Image
                   src={item.image || "/placeholder.svg"}
                   alt={item.title}
                   width={600}
                   height={400}
-                  className="w-full aspect-video object-cover transition-transform duration-500"
+                  className="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="portfolio-overlay">
-                  <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                  <p className="text-sm text-center mb-4">{item.description}</p>
-                  <Button size="sm" variant="outline" className="gap-2" asChild>
+                <div className="portfolio-overlay p-4 bg-white dark:bg-gray-800 bg-opacity-90 dark:bg-opacity-90">
+                  <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-center mb-4 text-gray-700 dark:text-gray-300">
+                    {item.description}
+                  </p>
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    className="gap-2 group-hover:bg-primary"
+                    asChild
+                  >
                     <a
                       href={item.url}
                       target="_blank"
