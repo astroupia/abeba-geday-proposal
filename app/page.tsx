@@ -39,7 +39,7 @@ export default function Home() {
                 </div>
                 <div>
                   {/* Render each word separately with a space */}
-                  {"Abeba Geday Business Group"
+                  {"Abeba Giday Business Group"
                     .split(" ")
                     .map((word, index) => (
                       <span

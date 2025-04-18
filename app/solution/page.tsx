@@ -27,7 +27,7 @@ export default function SolutionPage() {
               </h1>
               <p className="text-xl text-muted-foreground">
                 A comprehensive digital transformation package designed
-                specifically for Abeba Geday Business Group.
+                specifically for Abeba Giday Business Group.
               </p>
             </div>
           </div>
